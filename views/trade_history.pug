@@ -1,0 +1,27 @@
+
+extends layout
+
+block layout-content
+    div.View
+        h1.Banner #{title}
+        div
+            table
+                tr
+                    th Timestamp
+                    th Txn
+                    th Hash
+                    th Side
+                    th Rate
+                    th Fee
+                    th Fiat
+                    th Amount
+                for hist in data
+                    tr
+                        td=hist.ts
+                        td=hist.txn_id
+                        td=hist.hash
+                        td=hist.side
+                        td=hist.rate
+                        td=hist.fee
+                        td=hist.fiat
+                        td=hist.amount
